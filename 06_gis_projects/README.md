@@ -1,4 +1,4 @@
-# GIS 
+# GIS Projects 
 
 ## Overview 
 

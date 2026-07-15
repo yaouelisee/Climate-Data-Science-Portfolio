@@ -5,7 +5,7 @@
 This folder contains projects focused on scientific and data visualization .
 
 The objective is to transform  climate and environmental data
- into meaningful visual representations.
+into meaningful visual representations.
 
 ## Skills Developed 
 
@@ -18,6 +18,7 @@ The objective is to transform  climate and environmental data
 ## Applications 
 
 Projects include :
+
 - Temperature trends 
 - Rainfall visualization 
 - Climate variability graphs 

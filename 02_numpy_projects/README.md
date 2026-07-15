@@ -18,6 +18,7 @@ manipulation of environmental data.
 ## Applications 
 
 Projects focus on :
+
 - Temperature analysis
 - Climate anomalies 
 - Environmental calculations

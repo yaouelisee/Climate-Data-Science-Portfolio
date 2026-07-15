@@ -6,7 +6,7 @@ This folder contains projects using satellite
 imagery and remote sensimg data.
 
 The objective is to analyze Earth's surface
- and monitor environmental changes.
+and monitor environmental changes.
 
 ## Skills Developed 
 

@@ -1,4 +1,4 @@
-# Numpy Projects 
+# Pandas Projects 
 
 ## Overview 
 
@@ -26,5 +26,5 @@ Projects include  :
 
 - Python
 - Pandas 
-- VS Code 
+- VS Code
 
