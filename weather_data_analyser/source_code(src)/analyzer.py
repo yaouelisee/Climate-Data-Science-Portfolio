@@ -1,3 +1,12 @@
+"""
+This module contains functions used to analyze weather data .
+
+Each functions receives a list of weather records and returns
+aspecific climate indicator .
+"""
+
+
+
 def count_number_of_observations(records):
     " create a function that counts the number of observations "
 
@@ -11,13 +20,13 @@ def count_number_of_observations(records):
         total+=1
 
     # send the function back to the program  
-        return total   
+    return total   
 
 
 def find_hottest_day(records):
     "create a function that finds the hottest day of observations "
 
-    # variable that stores the hottest day initially at 0
+    # Assume the first observation is the hottest initially
     hottest_temp = records[0]['max_temp']
     hottest_day = records[0]
 
@@ -34,13 +43,13 @@ def find_hottest_day(records):
          hottest_day = day
 
     # return the hottest day to the program 
-        return hottest_day
+    return hottest_day
     
 
 def find_coldest_day(records):
      " create a funtion that finds the coldest day of observations "
     
-    # variable that stores the coldest day initially at index 0
+    # Assume the first observation is the coldest initially
      coldest_temp = records[0]['min_temp']
      coldest_day = records[0]
 
@@ -55,7 +64,7 @@ def find_coldest_day(records):
              coldest_day = day 
 
     # return the coldest day to the program 
-             return coldest_day
+     return coldest_day
          
 
 def find_rainiest_day(records):
@@ -77,7 +86,7 @@ def find_rainiest_day(records):
             rainiest_day = day 
 
 # return the rainiest day 
-            return rainiest_day
+    return rainiest_day
         
 
 def find_windest_day(records):
@@ -94,11 +103,11 @@ def find_windest_day(records):
         if day["wind_speed"] > windest :
 
 # the windest day is this current day
-            windest = day
-            windest_day = 0 
+            windest = day["wind_speed"]
+            windest_day = day
 
 # return the windest day 
-            return windest_day
+    return windest_day
         
 
 def calculate_average_maximum_temperature(records):
@@ -110,14 +119,14 @@ def calculate_average_maximum_temperature(records):
 # get through each observation 
     for day in records :
 
-
+# Add humidity values from every observation
         total+=day["max_temp"]
         
-
+# variable that store the average 
         average_max_temp = total / len(records)
 
-
-        return average_max_temp
+# Calculate the average maximum temperature
+    return average_max_temp
     
 
 def calculate_average_minimum_temperature(records):
@@ -136,7 +145,7 @@ def calculate_average_minimum_temperature(records):
         average_min_temp = total/len(records)
 
 
-        return average_min_temp
+    return average_min_temp
     
 
 def calculate_average_rainfall(records):
@@ -175,7 +184,7 @@ def calculate_average_rainfall(records):
             average_humidity = total / len(records)
 
 
-            return  average_humidity
+        return average_humidity 
         
 
 def calculate_average_wind_speed(records):
@@ -193,7 +202,7 @@ def calculate_average_wind_speed(records):
         average_wind_speed = total/len(records)
 
 
-        return average_wind_speed
+    return average_wind_speed
     
 
 
@@ -202,7 +211,7 @@ def count_rainy_days (records):
 
     total=0
 
-
+# Count observations were rainfall is gather than zero 
     for day in records:
 
 
@@ -212,7 +221,7 @@ def count_rainy_days (records):
             total+=1
 
 
-            return total 
+    return total 
 
 
 def count_dry_days(records):
@@ -220,23 +229,23 @@ def count_dry_days(records):
 
     total = 0 
 
-
+# Count days without precipitation
     for day in records :
 
-
+ 
         if day["rainfall"]==0:
 
 
             total+=1
 
 
-            return total 
+    return total 
         
 
 def find_day_with_highest_humidity(records):
 
 
-
+# Start the day with the largest difference
     highest_humidity= records[0]['humidity']
 
     day_with_highest_humidity=records[0]
@@ -255,19 +264,35 @@ def find_day_with_highest_humidity(records):
             day_with_highest_humidity=day
 
 
-            return day_with_highest_humidity
+    return day_with_highest_humidity
         
 
 def compute_daily_temperature_range(records):
 
+# Store the day with the largest difference
+    largest_range_day = records[0]
 
-    total=records
+    largest_range = (records[0]["max_temp"]-records[0]["min_temp"])
+
+    for day in records :
+        
+        current_range = (day["max_temp"]-day["min_temp"])
+
+        if current_range > largest_range : 
+            
+            largest_range = current_range 
+
+            largest_range_day = day 
+
+    return largest_range_day
 
 
-    for day in records:
+        
 
 
-        day['temperature_range']=day['max_temp']-day['min_temp']
+
+
+            
 
 
 
@@ -299,20 +324,3 @@ def compute_daily_temperature_range(records):
 
 
        
-        
-
-        
-    
-
-        
-
-        
-    
-    
-
-
-
-
-
-
-
