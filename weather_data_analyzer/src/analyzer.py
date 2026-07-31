@@ -166,23 +166,15 @@ def calculate_average_rainfall(records):
 
         return average_rainfall
     
+def calculate_average_humidity (records):
 
-    def calculate_average_humidity (records):
+      total = 0
 
+      for day in records :
 
+        total+=day["humidity"]
 
-        total = 0
-
-
-
-        for day in records :
-
-
-            total+=day["humidity"]
-
-
-            average_humidity = total / len(records)
-
+        average_humidity = total / len(records)
 
         return average_humidity 
         

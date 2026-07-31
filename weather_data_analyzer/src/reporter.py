@@ -1,4 +1,4 @@
-def generate_report(records,number_of_observations,hottest_days,coldest_day,
+def generate_report(records,total,hottest_days,coldest_day,
     rainiest_day,windest_day,average_maximum_temperature,average_minimum_temperature,
     average_rainfall,average_humidity,average_wind_speed,count_rainy_days,count_dry_days,
     day_with_highest_humidity,largest_range_day ):
@@ -18,7 +18,7 @@ def generate_report(records,number_of_observations,hottest_days,coldest_day,
     # records[0] is the first day in the list , records[-1]is the last day 
     #(-1 means "last elment" in python, no matter the list's length )
     print(f"Period:{records[0]['date']} to {records[-1]['date']}")
-    print(f"Total days recorded :{len(records)}")
+    print(f"Total days recorded :{total}")
     print("="*45)
 
     # :.2f formats a number to exactly 2 decimal places (e.g. 32.02)
@@ -29,21 +29,21 @@ def generate_report(records,number_of_observations,hottest_days,coldest_day,
     print(f"The minimum temperature is :{coldest_day['min_temp']}")
 
     print(f"\n The rainiest day is :{rainiest_day['date']}")
-    print(f"The rainiest day is : {rainiest_day['rainfall']}")
+    print(f"The highest rainfall is : {rainiest_day['rainfall']}")
 
     print(f"\nThe windest day is : {windest_day['date']}")
-    print(f"The windest day is : {windest_day['wind_speed']}")
+    print(f"The highest wind speed is : {windest_day['wind_speed']}")
 
 # Display every average of analyser.py 
-    print(f"\nThe average maximum temperature is :{average_maximum_temperature}")
+    print(f"\nThe average maximum temperature is :{average_maximum_temperature:.2f}")
 
-    print(f"The average minimum temperature is :{average_minimum_temperature}")
+    print(f"The average minimum temperature is :{average_minimum_temperature:.2f}")
 
-    print(f"The average rainfall is :{average_rainfall}")
+    print(f"The average rainfall is :{average_rainfall:.2f}")
 
-    print(f"The average humidity is :{average_humidity}")
+    print(f"The average humidity is :{average_humidity:.2f}")
     
-    print(f"The average wind speed is :{average_wind_speed}")
+    print(f"The average wind speed is :{average_wind_speed:.2f}")
 
 # Display the number of rainy days and the number of dry days 
     print(f"Number of rainy days :{count_rainy_days}")
