@@ -4,13 +4,13 @@ def load_weather_data(file_path):
 
     # This variable will store all weather observations 
     weather_records=[]
- 
-    # skip the header
-    next(file)
 
     # This built-in opens the file as a read mode 
     with open (file_path,"r") as file:
 
+        # skip the header 
+        next(file)
+        
         # Read the file one line at time 
         for line in file :
 
@@ -21,14 +21,14 @@ def load_weather_data(file_path):
             parts = line.split(",")
 
             # Create a dictionnary representing one weather observation 
-            day = {
-                "date"=parts[0], max_temp =int(parts[1]), min_temp=int(parts[2]), rainfall=int(parts[3]), humidity=int(parts[4]), wind_speed=int(parts[5])}
+            weather = {
+                "date":parts[0], "max_temp" :int(parts[1]), "min_temp":int(parts[2]), "rainfall":int(parts[3]), "humidity":int(parts[4]), "wind_speed":int(parts[5])}
 
             # Add the weather dictionnary into the empty list 
             weather_records.append(weather)
 
             # send the complete dataset back to the program 
-            return weather_records
+    return weather_records
         
 
 
