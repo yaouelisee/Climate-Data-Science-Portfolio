@@ -36,10 +36,10 @@ def process_weather_data(data):
         except ValueError :
             print(f"Invalid numerical data :{line}")
             continue 
-        
 
-        observation = WeatherStation (date,station,temperature,humidity,rainfall,wind_speed,pressure)
 
-        clean_data.append(observation)
+        observations = WeatherStation (date,station,temperature,humidity,rainfall,wind_speed,pressure)
+
+        clean_data.append(observations)
 
     return clean_data
