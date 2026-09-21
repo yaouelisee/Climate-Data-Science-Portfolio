@@ -12,6 +12,12 @@ def process_weather_data(data):
     clean_data = []
 
     for line in data :
+        
+        values = line.split(',')
+
+        date = values[0].strip()
+        station =  values[1].strip()
+
 
         # Ignore empty lines 
         if not line.strip():
@@ -20,11 +26,6 @@ def process_weather_data(data):
         if len(values) != 7:
             print("Invalid row :{line}")
             continue 
-
-        values = line.split(',')
-
-        date = values[0].strip()
-        station =  values[1].strip()
 
         try:
             temperature = float(values[2])

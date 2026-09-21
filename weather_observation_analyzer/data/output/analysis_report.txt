@@ -1,0 +1,50 @@
+============================================================
+           WEATHER OBSERVATION ANALYSIS
+============================================================
+
+TEMPERATURE
+------------------------------------------------------------
+Maximum temperature : 34.10
+Minimum temperature : 20.60
+Average temperature : 27.47
+
+HUMIDITY
+------------------------------------------------------------
+Maximum humidity : 97.90
+Minimum humidity : 31.80
+Average humidity : 68.25
+
+RAINFALL
+------------------------------------------------------------
+Maximum rainfall : 54.60
+Minimum rainfall : 0.00
+Average rainfall : 1.81
+
+WIND SPEED
+------------------------------------------------------------
+Maximum wind speed : 5.30
+Minimum wind speed : 0.20
+Average wind speed : 2.55
+
+PRESSURE
+------------------------------------------------------------
+Maximum pressure : 1021.40
+Minimum pressure : 1004.00
+Average pressure : 1013.15
+
+STATIONS
+------------------------------------------------------------
+Cotonou : 365 observation(s)
+Porto-Novo : 365 observation(s)
+Ouidah : 365 observation(s)
+Abomey-Calavi : 365 observation(s)
+Bohicon : 365 observation(s)
+Abomey : 365 observation(s)
+Parakou : 365 observation(s)
+Natitingou : 365 observation(s)
+Kandi : 365 observation(s)
+Malanville : 365 observation(s)
+
+============================================================
+Analysis completed successfully.
+============================================================
